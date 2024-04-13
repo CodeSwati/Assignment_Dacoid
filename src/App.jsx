@@ -1,18 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+import Page1 from './components/Page1'
+import Page2 from './components/Page2'
+import Status from './components/Status'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <>
-    hello world, hi swati
-    <div>
-      hi swati 
+
+    <div className='w-[375px] h-[44px] sm:w-full sm:h-full font-sans p-4'>
+      <Status/>
+
+      <Router>
+        <Routes >
+        
+          <Route path='/page1' element={<Page1/>}/>
+          <Route path='/page2' element={<Page2/>}/>
+        
+        </Routes>
+      </Router>
     </div>
-    </>
   )
 }
 
