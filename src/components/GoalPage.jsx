@@ -7,11 +7,12 @@ function GoalPage() {
         <h1 className='text-2xl font-bold '>What are your goals?</h1>
 
         <div className='flex flex-col gap-6'>
+            
             {["Weight Loss","Muscle Gain","Flexibility and Mobility","General Fitness","Event - specific training",
             "Mindfulness and Mental Health"].map((item,index)=>
 
-            <div className='bg-[#F1F1F1] w-[343px] h-[50px] border border-transparent rounded-xl p-2 flex 
-            justify-between'>
+            <div className='bg-[#F1F1F1] w-[343px] h-[50px] border border-transparent rounded-xl p-4 flex 
+            justify-between items-center text-sm'>
                 <p>{item}</p>
                 <input type="checkbox"/>
             </div>            
@@ -19,9 +20,9 @@ function GoalPage() {
             )}
         </div>
 
-        <Link to="/trackerPage" className='mt-12'>
+        <Link to="/trackerPage" className='mt-6'>
                 <button className='px-[6rem] py-2 flex justify-center items-center rounded-xl bg-gradient-to-r 
-                from-[#7B91FF] to-[#95BEFF] text-white'>Confirm</button>
+                from-[#7B91FF] to-[#95BEFF] text-white text-sm'>Confirm</button>
             </Link>
     </div>
   )

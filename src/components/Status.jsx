@@ -9,7 +9,7 @@ function Status() {
   
   return (
 
-    <div className='flex justify-between'>
+    <div className=' flex justify-between'>
         <p className='font-semibold text-sm'>9:41</p>
         <div className='flex gap-1'>
           <PiCellSignalFullBold />
