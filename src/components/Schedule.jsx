@@ -23,7 +23,8 @@ function Schedule() {
         <div className='flex justify-between w-[393px] '>
            {[{day:"Sun",date:"5"},{day:"Mon",date:"6"},{day:"Tue",date:"7"},{day:"Wed",date:"8"},{day:"Thu",date:"9"}
            ].map((item,index)=>
-           <div className="flex flex-col" >
+           <div className={`flex flex-col p-4 border border-transparent rounded-2xl
+            ${index==1 ?" bg-[#819dff]  text-white"  : "bg-white"   }`} >
               <p className='text-xs'>{item.day}</p>
               <p className='text-2xl font-semibold'>{item.date}</p>
            </div>
@@ -36,9 +37,10 @@ function Schedule() {
            ].map((item,index)=>
            <>
            <div className="flex flex-col" >
-              <div className='flex p-4'>
+              <div className='flex p-4 items-center'>
                 <p className='text-xs'>{item}</p>
                 <p className='text-xs'>AM</p>
+                <p className={`ml-10 text-xs ${index==8 ? "flex": "hidden" }`}>Lowerbody Workout, 3pm</p>
               </div>
               
               <hr className='border'/>
